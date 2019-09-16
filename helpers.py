@@ -20,3 +20,8 @@ def get_jaccard_sim(str1, str2):
     b = set(str2.split())
     c = a.intersection(b)
     return float(len(c)) / (len(a) + len(b) - len(c))
+
+
+def cross_join_dataframes(left, right):
+    return (
+        left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
