@@ -2,11 +2,17 @@ import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 
+import nltk
 
-def normalise_data(x):
+
+def normalise_number_data(x):
     if type(x) != np.array:
         x = np.array(x)
     return pd.Series(preprocessing.normalize(x[:, np.newaxis], axis=0).ravel())
+
+
+def normalise_word_data(x):
+    return x.applymap(nltk.stem.PorterStemmer().stem)
 
 
 def get_jaccard_sim(str1, str2):
