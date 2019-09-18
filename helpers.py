@@ -25,3 +25,14 @@ def get_jaccard_sim(str1, str2):
 def cross_join_dataframes(left, right):
     return (
         left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
+
+def get_gaussian_similarity(d, scale, origin=0):
+
+    if scale <= 0:
+        raise ValueError("The scale must be larger than 0. ")
+
+    d = (abs(d - origin))
+
+    expr = '2**(-((d)/scale)**2)'
+
+    return pandas.eval(expr)
