@@ -13,3 +13,5 @@ GOOGLE_AMAZON_SMALL_LABEL_PATH = os.path.join(
     dir_path, 'amazon_google_truth_small.csv')
 GOOGLE_AMAZON_LABEL_PATH = os.path.join(
     dir_path, 'amazon_google_truth.csv')
+
+YEAST_PATH = os.path.join(dir_path, 'all_yeast.csv')
