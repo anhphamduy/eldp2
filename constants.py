@@ -7,7 +7,7 @@ AMAZON_PATH = os.path.join(dir_path, 'amazon.csv')
 
 GOOGLE_SMALL_PATH = os.path.join(dir_path, 'google_small.csv')
 AMAZON_SMALL_PATH = os.path.join(dir_path, 'amazon_small.csv')
-
+GOOGLE_AMAZON_SMALL_TRUTH_PATH = os.path.join(dir_path, 'amazon_google_truth_small.csv')
 
 GOOGLE_AMAZON_SMALL_LABEL_PATH = os.path.join(
     dir_path, 'amazon_google_truth_small.csv')
